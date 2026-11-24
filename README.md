@@ -85,6 +85,57 @@ SMTP_PASSWORD=...
 
 ```
 
+## From the CLI
+
+
+Eagle can also be used directly from the command line.
+
+Activate your Python environment:
+
+```bash
+source menv/bin/activate
+```
+
+Example:
+
+```bash
+python -m src.app \
+  --username alice \
+  --contract Internship \
+  --domain "Data Engineering" \
+  --limit 5
+```
+
+Add `--send` to send generated applications after confirmation, or `--force` to enable force sending.
+
+#### Available arguments
+
+| Argument | Required | Default | Description |
+|---|---|---|---|
+| `--username` | Yes | — | User account and workspace |
+| `--contract` | Yes | — | Contract type (e.g. Internship, CDI) |
+| `--domain` | Yes | — | Target professional domain |
+| `--contacts` | No | `contacts/contacts.csv` | Contacts CSV file |
+| `--cv` | No | `data/cv.json` | Candidate CV data |
+| `--letter` | No | `data/cover_letter.json` | Cover letter data |
+| `--template` | No | `templates/cv.tex.j2` | LaTeX CV template |
+| `--prompt` | No | `prompts/prompt.txt` | AI generation instructions |
+| `--limit` | No | `5` | Maximum number of contacts to process |
+| `--send` | No | `False` | Send applications after explicit confirmation |
+| `--force` | No | `False` | Enable force sending (send the email even if already recorded in the database) |
+| `--base-url` | No | `https://openrouter.ai/api/v1` | OpenAI-compatible API endpoint |
+| `--api-key` | No | `AI_API_KEY` environment variable | API authentication key |
+| `--model` | No | `None` | Model identifier exposed by the API |
+
+File paths are resolved relative to the selected user's workspace under `users/<username>/`.
+
+For all available options:
+
+```bash
+python -m src.app --help
+```
+
+
 ## Running the Web Application
 
 ```bash
@@ -105,7 +156,7 @@ limit_req_zone $binary_remote_addr zone=eagle_limit:10m rate=10r/m;
 
 ```
 
-Then yu can create the Nginx conf file at `/etc/nginx/sites-available/eagle.conf`:
+Then you can create the Nginx conf file at `/etc/nginx/sites-available/eagle.conf`:
 
 
 ```nginx

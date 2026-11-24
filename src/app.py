@@ -92,7 +92,7 @@ def main() -> None:
     parser.add_argument(
       '--force', 
       action='store_true', 
-      help='Force Send'
+      help='Force Send (it will send the email even if already recorded in the database)'
     )
 
     parser.add_argument(
