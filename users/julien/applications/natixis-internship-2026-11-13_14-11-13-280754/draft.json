@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Natixis",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Banking",
+    "city": "Paris",
+    "website": "https://www.interepargne.natixis.com",
+    "notes": "Data infrastructure"
+  },
+  "contract": "internship",
+  "subject": "Candidature spontanée – Stage en Data Engineering (Natixis)",
+  "body": "Madame, Monsieur,\n\nJe vous adresse ma candidature spontanée pour un stage en Data Engineering au sein de Natixis à Paris. Étudiant en Master en informatique (Université Exemple, 2024–2026), j’ai réalisé un stage de développement où j’ai travaillé sur des scripts Python et des requêtes SQL.\n\nVous trouverez ci-joints mon CV et ma lettre de motivation. Je reste à votre disposition pour un échange à votre convenance.\n\nBien cordialement,\nJohn Doe\n+33 6 00 00 00 00\njohn@example.com",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Natixis",
+    "company_city": "Paris",
+    "date": "13 novembre 2026",
+    "subject": "Candidature spontanée – Stage en Data Engineering",
+    "salutation": "Madame, Monsieur,",
+    "body": [
+      "Je vous adresse ma candidature spontanée pour un stage en Data Engineering au sein de Natixis, à Paris. Attiré par les enjeux de la donnée dans le secteur bancaire et par l’importance des infrastructures de données, je souhaite contribuer à vos équipes.",
+      "Actuellement étudiant en Master en informatique (Université Exemple, 2024–2026), j’ai consolidé des bases en Python, SQL et Linux. Lors de mon stage en 2025 chez Entreprise Exemple en tant que stagiaire développement, j’ai réalisé le développement de scripts en Python et la rédaction de requêtes SQL.",
+      "Je serais ravi d’échanger afin de vous présenter ma motivation et d’explorer la manière dont je pourrais soutenir vos activités data."
+    ],
+    "closing": "Cordialement,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique — Stage en Data Engineering",
+    "summary": "Étudiant intéressé par l’ingénierie des données, avec pratique de Python, SQL et Linux.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts en Python",
+          "Rédaction de requêtes SQL"
+        ]
+      }
+    ]
+  }
+}

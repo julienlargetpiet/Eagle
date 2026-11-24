@@ -1,0 +1,10 @@
+Dear Hiring Manager,
+
+Please find attached my CV and cover letter for a Data Engineering internship at Clarins. I am a Master’s student in computer science with experience in Python and SQL, and I am motivated by your interest in data analytics.
+
+I would be pleased to discuss how I can contribute. Thank you for your consideration.
+
+Kind regards,
+John Doe
+john@example.com
++33 6 00 00 00 00

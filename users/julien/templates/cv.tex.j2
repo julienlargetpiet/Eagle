@@ -1,0 +1,35 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1.7cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{enumitem}
+\setlist[itemize]{noitemsep,topsep=2pt,leftmargin=*}
+\pagestyle{empty}
+\begin{document}
+\begin{center}
+{\LARGE\bfseries ((( name ))) }\\[3pt]
+((( headline )))
+\end{center}
+
+\section*{Profil}
+((( summary )))
+
+\section*{Formation}
+((* for item in education *))
+\textbf{((( item.degree )))} --- ((( item.institution ))) \hfill ((( item.period )))\par
+((* endfor *))
+
+\section*{Expériences}
+((* for item in experience *))
+\textbf{((( item.position )))} --- ((( item.company ))) \hfill ((( item.period )))\par
+\begin{itemize}
+((* for achievement in item.achievements *))
+\item ((( achievement )))
+((* endfor *))
+\end{itemize}
+((* endfor *))
+
+\section*{Compétences}
+((( skills )))
+\end{document}

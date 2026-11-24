@@ -1,0 +1,10 @@
+Madame, Monsieur,
+
+Actuellement étudiant en Master en informatique (Université Exemple, 2024–2026), je vous adresse ma candidature spontanée pour un stage en Data Engineering chez Veolia à Paris. Lors d’un précédent stage, j’ai développé des scripts en Python et rédigé des requêtes SQL, compétences que je souhaite mettre au service de vos équipes.
+
+Vous trouverez ci-joints mon CV et ma lettre de motivation. Je reste à votre disposition pour un échange.
+
+Cordialement,
+John Doe
+john@example.com
++33 6 00 00 00 00

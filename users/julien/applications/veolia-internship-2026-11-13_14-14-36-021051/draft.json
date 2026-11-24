@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Veolia",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Environment",
+    "city": "Paris",
+    "website": "https://www.eau.veolia.fr",
+    "notes": "Data engineering opportunities"
+  },
+  "contract": "internship",
+  "subject": "Candidature spontanée – Stage en Data Engineering",
+  "body": "Madame, Monsieur,\n\nActuellement étudiant en Master en informatique (Université Exemple, 2024–2026), je vous adresse ma candidature spontanée pour un stage en Data Engineering chez Veolia à Paris. Lors d’un précédent stage, j’ai développé des scripts en Python et rédigé des requêtes SQL, compétences que je souhaite mettre au service de vos équipes.\n\nVous trouverez ci-joints mon CV et ma lettre de motivation. Je reste à votre disposition pour un échange.\n\nCordialement,\nJohn Doe\njohn@example.com\n+33 6 00 00 00 00",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Veolia",
+    "company_city": "Paris",
+    "date": "13 novembre 2026",
+    "subject": "Candidature spontanée – Stage en Data Engineering",
+    "salutation": "Madame, Monsieur,",
+    "body": [
+      "Je vous écris pour vous faire part de mon intérêt à rejoindre Veolia à Paris dans le cadre d’un stage en Data Engineering.",
+      "Actuellement étudiant en Master en informatique (Université Exemple, 2024–2026), j’ai consolidé des bases que je souhaite mettre en pratique : développement de scripts en Python et rédaction de requêtes SQL, acquises lors d’un stage en développement.",
+      "Je serais heureux d’échanger sur la manière dont je pourrais contribuer à vos projets data. Je reste à votre disposition pour un entretien à votre convenance."
+    ],
+    "closing": "Cordialement,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique – Stage en Data Engineering",
+    "summary": "Étudiant en informatique intéressé par l’ingénierie des données, à la recherche d’un stage.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts en Python",
+          "Rédaction de requêtes SQL"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eagle — {{ mode|capitalize }}</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', path='/style.css') }}">
+
+    <link rel='icon' type='image/png' href="{{ url_for('static', path='/favicon.png') }}">
+
+    <script src="{{ url_for('static', path='/app.js') }}" defer></script>
+</head>
+<body>
+<main>
+
+    <header class="header">
+        <div>
+            <div class="eyebrow">
+                <a href="/">EAGLE</a>
+            </div>
+
+            <h1>
+                {% if mode == "login" %}
+                    Login
+                {% else %}
+                    Create an account
+                {% endif %}
+                <span class="dot">.</span>
+            </h1>
+
+            <p class="sub">Welcome to Eagle.</p>
+        </div>
+    </header>
+
+    {% if error %}
+        <div class="notice error" role="alert">
+            {{ error }}
+        </div>
+    {% endif %}
+
+    <section class="panel auth-panel">
+
+        <form method="post" action="/{{ mode }}">
+
+            <input
+                type="hidden"
+                name="csrf_token"
+                value="{{ csrf_token }}"
+            >
+
+            <div class="field">
+                <label for="username">Username</label>
+                <input
+                    id="username"
+                    name="username"
+                    type="text"
+                    autocomplete="username"
+                    required
+                >
+            </div>
+
+            <div class="field">
+                <label for="password">Password</label>
+                <input
+                    id="password"
+                    name="password"
+                    type="password"
+                    autocomplete="{{ 'current-password' if mode == 'login' else 'new-password' }}"
+                    {% if mode == "register" %}minlength="12"{% endif %}
+                    required
+                >
+            </div>
+
+            <button type="submit" class="primary">
+                {% if mode == "login" %}
+                    Login →
+                {% else %}
+                    Create account →
+                {% endif %}
+            </button>
+
+        </form>
+
+        <p class="sub">
+            {% if mode == "login" %}
+                Don't have an account?
+                <a href="/register">Register</a>
+            {% else %}
+                Already have an account?
+                <a href="/login">Login</a>
+            {% endif %}
+        </p>
+
+    </section>
+
+</main>
+</body>
+</html>

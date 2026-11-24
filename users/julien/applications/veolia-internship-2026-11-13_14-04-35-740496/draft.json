@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Veolia",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Environment",
+    "city": "Paris",
+    "website": "https://www.eau.veolia.fr",
+    "notes": "Data engineering opportunities"
+  },
+  "contract": "internship",
+  "subject": "Spontaneous application – Data Engineering Internship at Veolia",
+  "body": "Dear Hiring Manager,\n\nI am reaching out with a spontaneous application for a Data Engineering internship at Veolia (Paris). Currently a Master’s student in computer science, I have practical experience with Python and SQL from a prior development internship and I am motivated to contribute to data initiatives that support environmental services. Please find my CV and cover letter attached.\n\nThank you for your consideration,\nJohn Doe\n+33 6 00 00 00 00\njohn@example.com",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Veolia",
+    "company_city": "Paris",
+    "date": "November 13, 2026",
+    "subject": "Spontaneous application – Data Engineering Internship",
+    "salutation": "Dear Hiring Manager,",
+    "body": [
+      "I am writing to express my interest in a Data Engineering internship at Veolia in Paris. Motivated by the challenges of managing and leveraging data to support environmental services, I am submitting a spontaneous application.",
+      "Currently pursuing a Master en informatique (2024–2026) at Université Exemple, I strengthened my skills in Python and SQL during a development internship in 2025 at Entreprise Exemple (scripts in Python, database queries). I am eager to contribute to the creation of reliable datasets and data flows and to apply rigorous practices in Linux environments.",
+      "I would welcome the opportunity to discuss how my skills in Python, SQL and Linux could support your data engineering initiatives."
+    ],
+    "closing": "Yours sincerely,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique – stage en Data Engineering",
+    "summary": "Étudiant intéressé par l'ingénierie des données, souhaitant effectuer un stage en Data Engineering chez Veolia. Compétences pratiques en Python, SQL et Linux, développées lors d'un stage de développement.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts en Python",
+          "Rédaction de requêtes SQL"
+        ]
+      }
+    ]
+  }
+}

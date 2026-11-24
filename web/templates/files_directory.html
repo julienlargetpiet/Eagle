@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eagle — {{ directory }}/</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <link rel='icon' type='image/png' href="{{ url_for('static', path='/favicon.png') }}">
+
+    <script src="{{ url_for('static', path='/app.js') }}" defer></script>
+</head>
+
+<body>
+<main>
+
+    <header class="header">
+        <div>
+
+            <div class="eyebrow">
+                <a href="/{{ username }}">EAGLE</a>
+                /
+                <a href="/{{ username }}/manage-files">FILE MANAGER</a>
+            </div>
+
+            <h1>{{ directory }}/<span class="dot">.</span></h1>
+
+            <p class="sub">View, upload and delete files.</p>
+        </div>
+
+    </header>
+
+    {% if notice %}
+    <div class="notice ok">{{ notice }}</div>
+    {% endif %}
+
+    {% if error %}
+    <div class="notice error">{{ error }}</div>
+    {% endif %}
+
+    <section class="panel">
+
+        <div class="section-head">
+            <div>
+                <div class="eyebrow">01 / Files</div>
+                <h2>{{ directory }}/</h2>
+            </div>
+
+            <a href="/{{ username }}/manage-files" class="files-button">
+                ← Back to directories
+            </a>
+        </div>
+
+        {% if files %}
+
+            {% for file in files %}
+            <article class="row">
+
+                <div class="row-content">
+                    <h3>{{ file.name }}</h3>
+                    <p class="meta">{{ file.size }} bytes</p>
+                </div>
+
+                <div class="file-actions">
+
+                    <a
+                        class="files-button"
+                        href="/{{ username }}/manage-files/{{ directory }}/view/{{ file.name | urlencode }}"
+                        target="_blank"
+                        rel="noopener"
+                    >
+                        View ↗
+                    </a>
+
+                    <form
+                        method="post"
+                        action="/{{ username }}/manage-files/{{ directory }}/delete"
+                        onsubmit="return confirm('Delete this file permanently?')"
+                    >
+                        <input
+                            type="hidden"
+                            name="csrf_token"
+                            value="{{ csrf_token }}"
+                        >
+
+                        <input
+                            type="hidden"
+                            name="filename"
+                            value="{{ file.name }}"
+                        >
+
+                        <button type="submit" class="file-delete">
+                            Delete
+                        </button>
+                    </form>
+
+                </div>
+
+            </article>
+            {% endfor %}
+
+        {% else %}
+            <p class="empty">No files in this directory.</p>
+        {% endif %}
+
+    </section>
+
+    <section class="panel">
+
+        <div class="section-head">
+            <div>
+                <div class="eyebrow">02 / Upload</div>
+                <h2>Add a file</h2>
+            </div>
+        </div>
+
+        <form
+            method="post"
+            action="/{{ username }}/manage-files/{{ directory }}/upload"
+            enctype="multipart/form-data"
+        >
+
+            <input
+                type="hidden"
+                name="csrf_token"
+                value="{{ csrf_token }}"
+            >
+
+            <div class="field">
+                <label for="file">Select a file</label>
+
+                <input
+                    id="file"
+                    name="file"
+                    type="file"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="primary">
+                Upload file ↑
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+</body>
+</html>
+
+
+

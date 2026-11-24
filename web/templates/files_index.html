@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Eagle — File Manager</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', path='/favicon.png') }}">
+
+    <script src="{{ url_for('static', path='/app.js') }}" defer></script>
+</head>
+
+<body>
+<main>
+
+    <header class="header">
+        <div>
+
+            <div class="eyebrow">
+                <a href="/{{ username }}">EAGLE</a>
+                /
+                <a href="/{{ username }}/manage-files">FILE MANAGER</a>
+            </div>
+
+            <h1>Manage files<span class="dot">.</span></h1>
+
+            <p class="sub">Browse your application resources.</p>
+
+        </div>
+    </header>
+
+    <section class="panel">
+
+        <div class="section-head">
+            <div>
+                <div class="eyebrow">01 / Directories</div>
+                <h2>Project files</h2>
+            </div>
+
+            <a href="/{{ username }}" class="files-button">
+                ← Back to Eagle
+            </a>
+        </div>
+
+        <div class="directory-grid">
+            {% for directory in directories %}
+            <a href="/{{ username }}/manage-files/{{ directory }}"
+               class="directory-card">
+                <span class="directory-icon">▣</span>
+                <strong>{{ directory }}/</strong>
+                <span>OPEN ↗</span>
+            </a>
+            {% endfor %}
+        </div>
+
+    </section>
+
+</main>
+</body>
+</html>
+
+
+
+

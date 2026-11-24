@@ -1,0 +1,10 @@
+Madame, Monsieur,
+
+Je vous adresse ma candidature spontanée pour un stage en Data Engineering au sein de Natixis à Paris. Étudiant en Master en informatique (Université Exemple, 2024–2026), j’ai réalisé un stage de développement où j’ai travaillé sur des scripts Python et des requêtes SQL.
+
+Vous trouverez ci-joints mon CV et ma lettre de motivation. Je reste à votre disposition pour un échange à votre convenance.
+
+Bien cordialement,
+John Doe
++33 6 00 00 00 00
+john@example.com

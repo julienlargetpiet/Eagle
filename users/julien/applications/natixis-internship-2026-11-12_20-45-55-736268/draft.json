@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Natixis",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Banking",
+    "city": "Paris",
+    "website": "https://www.interepargne.natixis.com",
+    "notes": "Data infrastructure"
+  },
+  "contract": "internship",
+  "subject": "Spontaneous Application – Data Engineering Internship at Natixis",
+  "body": "Dear Hiring Team,\n\nI am submitting a spontaneous application for a Data Engineering internship at Natixis in Paris. I am currently pursuing a Master in Computer Science (2024–2026) and have experience with Python and SQL from a prior development internship.\n\nPlease find attached my CV and cover letter. I would welcome the opportunity to discuss how I could contribute to your data infrastructure initiatives.\n\nBest regards,\nJohn Doe\nParis\n+33 6 00 00 00 00\njohn@example.com",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Natixis",
+    "company_city": "Paris",
+    "date": "12 November 2026",
+    "subject": "Spontaneous application — Data Engineering Internship",
+    "salutation": "Dear Hiring Manager,",
+    "body": [
+      "I am writing to express my interest in a Data Engineering internship at Natixis in Paris as part of a spontaneous application. Contributing to data infrastructure within a banking environment is a challenge that strongly motivates me.",
+      "Currently pursuing a Master en informatique (2024–2026) at Université Exemple, I have developed skills in Python, SQL and Linux. During a development internship in 2025 at Entreprise Exemple, I created Python scripts and wrote SQL queries—expertise I am eager to apply to data engineering topics such as data processing and integration at Natixis.",
+      "I would welcome the opportunity to discuss my application with you and explore how I could support your teams. Thank you for your consideration."
+    ],
+    "closing": "Yours sincerely,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique — Stage en Data Engineering",
+    "summary": "Étudiant en informatique intéressé par l’ingénierie des données, à la recherche d’un stage en Data Engineering dans le secteur bancaire. Compétences : Python, SQL, Linux. Expérience : développement de scripts Python et écriture de requêtes SQL.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts Python",
+          "Rédaction de requêtes SQL"
+        ]
+      }
+    ]
+  }
+}

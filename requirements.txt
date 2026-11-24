@@ -1,0 +1,8 @@
+openai
+python-dotenv
+Jinja2
+fastapi
+uvicorn
+python-multipart
+argon2-cffi
+itsdangerous

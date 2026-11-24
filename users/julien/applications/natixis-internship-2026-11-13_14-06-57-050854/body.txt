@@ -1,0 +1,10 @@
+Dear Hiring Manager,
+
+I am submitting my spontaneous application for a Data Engineering internship at Natixis in Paris. I am a Master’s Computer Science student (2024–2026) with a prior development internship where I built Python scripts and wrote SQL queries. I am keen to contribute to your data infrastructure initiatives in the banking sector.
+
+Please find my CV and cover letter attached. I would welcome the opportunity to discuss my application.
+
+Best regards,
+John Doe
+Paris
+john@example.com | +33 6 00 00 00 00

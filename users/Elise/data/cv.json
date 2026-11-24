@@ -1,0 +1,26 @@
+{
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique",
+    "summary": "Étudiant intéressé par l'ingénierie des données.",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts Python",
+          "Écriture de requêtes SQL"
+        ]
+      }
+    ],
+    "skills": "Python, SQL, Linux"
+  }
+}

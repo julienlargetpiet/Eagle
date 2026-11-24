@@ -1,0 +1,89 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{ragged2e}
+\usepackage[hidelinks]{hyperref}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+% Candidate information
+{\Large\bfseries ((( name )))}\\[0.3cm]
+
+((* if email *))
+\href{mailto:((( email )))}{((( email )))}\\
+((* endif *))
+
+((* if phone *))
+((( phone )))\\
+((* endif *))
+
+((* if city *))
+((( city )))\\
+((* endif *))
+
+\vspace{1cm}
+
+% Recipient
+\begin{flushright}
+((* if company *))
+\textbf{((( company )))}\\
+((* endif *))
+
+((* if company_city *))
+((( company_city )))\\
+((* endif *))
+
+\vspace{0.5cm}
+((* if date *))
+((( date )))
+((* endif *))
+\end{flushright}
+
+\vspace{0.8cm}
+
+% Subject
+\textbf{Subject: ((( subject )))}
+
+\vspace{0.6cm}
+
+% Salutation
+((* if salutation *))
+((( salutation )))
+((* else *))
+Dear Hiring Manager,
+((* endif *))
+
+\vspace{0.5cm}
+
+% Cover letter body
+\justifying
+
+((* for paragraph in body *))
+((( paragraph )))
+
+\par
+((* endfor *))
+
+\vspace{0.7cm}
+
+% Closing
+((* if closing *))
+((( closing )))
+((* else *))
+Sincerely,
+((* endif *))
+
+\vspace{0.5cm}
+
+\textbf{((( name )))}
+
+\end{document}
+
+

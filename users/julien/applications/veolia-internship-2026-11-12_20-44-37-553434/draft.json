@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Veolia",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Environment",
+    "city": "Paris",
+    "website": "https://www.eau.veolia.fr",
+    "notes": "Data engineering opportunities"
+  },
+  "contract": "internship",
+  "subject": "Candidature spontanée – Stage en Data Engineering – Veolia (Paris)",
+  "body": "Madame, Monsieur, Étudiant en Master informatique, je vous adresse ma candidature pour un stage en Data Engineering au sein de Veolia à Paris. J’ai pratiqué Python, SQL et Linux lors d’un stage et souhaite contribuer à vos projets data. Vous trouverez ci-joints mon CV et ma lettre de motivation; je reste à votre disposition pour un échange. Bien cordialement, John Doe | +33 6 00 00 00 00 | john@example.com",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Veolia",
+    "company_city": "Paris",
+    "date": "12 novembre 2026",
+    "subject": "Candidature spontanée – Stage en Data Engineering",
+    "salutation": "Madame, Monsieur,",
+    "body": [
+      "Je me permets de vous adresser ma candidature spontanée pour un stage en Data Engineering au sein de Veolia, acteur du secteur de l’environnement à Paris. Étudiant en Master informatique, je souhaite mettre mes compétences techniques au service de vos équipes.",
+      "Mes études et un stage en développement m’ont permis de pratiquer Python et SQL, ainsi que d’évoluer sous Linux. Je souhaite contribuer à des missions telles que l’écriture de scripts, l’interrogation de bases de données et l’automatisation, tout en consolidant mes bases en ingénierie des données au contact de vos experts.",
+      "Je serais heureux d’échanger afin de préciser vos besoins et la manière dont je peux y contribuer."
+    ],
+    "closing": "Cordialement,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique – Stage en Data Engineering",
+    "summary": "Étudiant intéressé par l'ingénierie des données.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développé des scripts Python",
+          "Rédigé des requêtes SQL"
+        ]
+      }
+    ]
+  }
+}

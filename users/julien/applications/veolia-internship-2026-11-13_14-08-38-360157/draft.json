@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Veolia",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Environment",
+    "city": "Paris",
+    "website": "https://www.eau.veolia.fr",
+    "notes": "Data engineering opportunities"
+  },
+  "contract": "internship",
+  "subject": "Spontaneous application – Data Engineering Internship | Veolia (Paris)",
+  "body": "Dear Hiring Manager,\n\nI am reaching out with a spontaneous application for a Data Engineering internship at Veolia in Paris. I am a Master's student in Computer Science (2024–2026) with hands-on experience developing Python scripts and writing SQL queries during a 2025 internship. I am motivated to contribute to data initiatives in the Environment sector and to learn within your teams.\n\nI remain at your disposal for an interview.\n\nBest regards,\nJohn Doe\nParis | +33 6 00 00 00 00 | john@example.com",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Veolia",
+    "company_city": "Paris",
+    "date": "13 November 2026",
+    "subject": "Spontaneous application – Data Engineering Internship",
+    "salutation": "Dear Hiring Manager,",
+    "body": [
+      "I am writing to express my interest in a Data Engineering internship at Veolia in Paris. Your activities in the Environment sector align with my academic path and my motivation to support data-driven initiatives.",
+      "Currently pursuing a Master en informatique (2024–2026) at Université Exemple, I have developed practical skills in Python and SQL, notably during a 2025 development internship where I created Python scripts and wrote SQL queries. I would like to apply these skills, together with my familiarity with Linux, to support your data engineering efforts.",
+      "I would welcome the opportunity to discuss my application with you."
+    ],
+    "closing": "Yours sincerely,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Computer Science Master's Student — Seeking Data Engineering Internship",
+    "summary": "Master's student in computer science (2024–2026), interested in data engineering. Practical experience developing Python scripts and writing SQL queries during a 2025 development internship. Eager to contribute to data initiatives in the Environment sector.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Developed Python scripts",
+          "Wrote SQL queries"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+Madame, Monsieur,
+
+Je vous adresse ma candidature spontanée pour un stage en Data Engineering au sein de Clarins à Pontoise. Étudiant en Master informatique (2024–2026), j’ai une première expérience de stage en développement, avec des compétences en Python, SQL et Linux que je souhaite mettre au service de vos initiatives orientées data analytics.
+
+Je me tiens à votre disposition pour un échange et pour vous transmettre toute information complémentaire. Vous trouverez ci-joints mon CV et ma lettre de motivation.
+
+Bien cordialement,
+John Doe

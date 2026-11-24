@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Clarins",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Cosmetics",
+    "city": "Pontoise",
+    "website": "https://www.clarins.fr",
+    "notes": "Interested in data analytics"
+  },
+  "contract": "internship",
+  "subject": "Spontaneous application — Data Engineering Internship at Clarins",
+  "body": "Dear Hiring Manager,\n\nPlease find attached my CV and cover letter for a Data Engineering internship at Clarins. I am a Master’s student in computer science with experience in Python and SQL, and I am motivated by your interest in data analytics.\n\nI would be pleased to discuss how I can contribute. Thank you for your consideration.\n\nKind regards,\nJohn Doe\njohn@example.com\n+33 6 00 00 00 00",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Clarins",
+    "company_city": "Pontoise",
+    "date": "13 November 2026",
+    "subject": "Spontaneous application – Data Engineering Internship",
+    "salutation": "Dear Hiring Manager,",
+    "body": [
+      "I am writing to express my interest in a Data Engineering internship at Clarins. Your activity in the cosmetics sector and your interest in data analytics align with my academic focus and my motivation to contribute to data‑driven initiatives.",
+      "Currently enrolled in a Master en informatique (2024–2026) at Université Exemple, I recently completed a development internship at Entreprise Exemple (2025) where I developed Python scripts and wrote SQL queries. These experiences, combined with my skills in Python, SQL and Linux, have strengthened my ability to process data and support analytics work.",
+      "I would welcome the opportunity to discuss how I could contribute to your projects. Thank you for considering my application."
+    ],
+    "closing": "Yours sincerely,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique — Stage en Data Engineering",
+    "summary": "Étudiant intéressé par l'ingénierie des données, maîtrisant Python, SQL et Linux, à la recherche d'un stage en Data Engineering, idéalement dans le secteur des cosmétiques.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts en Python pour automatiser des traitements",
+          "Rédaction de requêtes SQL pour l'extraction et l'analyse de données"
+        ]
+      }
+    ]
+  }
+}

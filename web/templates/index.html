@@ -1,0 +1,512 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eagle</title>
+  
+  <link rel="stylesheet" href="{{ url_for('static', path='/style.css') }}">
+  <link rel='icon' type='image/png' href="{{ url_for('static', path='/favicon.png') }}">
+
+  <script src="{{ url_for('static', path='/app.js') }}" defer></script>
+
+</head>
+<body>
+<main>
+
+  <header class="header">
+
+    <div>
+
+      <div class="eyebrow">
+          <a href="/{{ username }}">EAGLE</a>
+      </div>
+
+        <div class="eagle-logo">
+            <img
+                class="logo-light"
+                src="{{ url_for('static', path='/logo.png') }}"
+                alt="Eagle"
+            >
+
+            <img
+                class="logo-dark"
+                src="{{ url_for('static', path='/logo-dark.png') }}"
+                alt=""
+            >
+        </div>
+
+      <p class="sub">Generate, review and send your applications.</p>
+
+    </div>
+
+  </header>
+
+  {% if notice %}<div class="notice ok" role="status">{{ notice }}</div>{% endif %}
+  {% if error %}<div class="notice error" role="alert">{{ error }}</div>{% endif %}
+
+  <form method="post" action="/logout" class="logout-form">
+      <input
+          type="hidden"
+          name="csrf_token"
+          value="{{ csrf_token }}"
+      >
+      <button type="submit">Logout ↗</button>
+  </form>
+
+  <section class="panel" aria-labelledby="gen-title">
+
+    <div class="section-head">
+
+      <div>
+          <div class="eyebrow">01 / Generator</div>
+          <h2 id="gen-title">New application batch</h2>
+      </div>
+
+      <a href="/{{ username }}/manage-files" class="files-button">
+          Manage files ↗
+      </a>
+
+    </div>
+
+    <form method="post" action="/{{ username }}/generate" id="generate-form">
+
+      <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+      <div class="grid">
+
+        <div class="field">
+            <label for="contacts">Contacts CSV</label>
+            <input 
+                id="contacts" 
+                name="contacts" 
+                type="text" 
+                value="contacts/contacts.csv" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="cv">Candidate CV (JSON)</label>
+            <input 
+                id="cv" 
+                name="cv" 
+                type="text" 
+                value="data/cv.json" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="letter">Reference letter (MD / TXT)</label>
+            <input 
+                id="letter" 
+                name="letter" 
+                type="text" 
+                value="data/cover_letter.json" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="template">LaTeX CV template</label>
+            <input 
+                id="template" 
+                name="template" 
+                type="text" 
+                value="templates/cv.tex.j2" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="template_letter">LaTeX Cover-Letter template</label>
+            <input 
+                id="template_letter" 
+                name="template_letter" 
+                type="text" 
+                value="templates/cover-letter.tex.j2" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="contract">Contract type</label>
+            <input 
+                id="contract" 
+                name="contract" 
+                type="text" 
+                value="internship" 
+                list="contract-options" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="domain">Domain</label>
+            <input 
+                id="domain" 
+                name="domain" 
+                type="text" 
+                value="Data Engineering" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="limit">Application limit</label>
+            <input 
+                id="limit" 
+                name="limit" 
+                type="number" 
+                value="5" 
+                min="1" 
+                max="100" 
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="prompt">Agent prompt</label>
+            <input
+                id="prompt"
+                name="prompt"
+                type="text"
+                value="prompts/prompt.txt"
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="base_url_setup">LLM URL Endpoint</label>
+            <input
+                id="base_url_setup"
+                name="base_url_setup"
+                type="text"
+                autocomplete="on"
+                placeholder="http://127.0.0.1:8080/v1"
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="ai_model">LLM model</label>
+            <input
+                id="ai_model"
+                name="ai_model"
+                type="text"
+                autocomplete="on"
+                placeholder="Example: openrouter/free"
+                required
+            >
+        </div>
+
+        <div class="field">
+            <label for="api_key">LLM API key</label>
+        
+            <div class="password-wrapper">
+                <input
+                    id="api_key"
+                    name="api_key"
+                    type="password"
+                    autocomplete="on"
+                    required
+                >
+        
+                <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                >Show</button>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="host_setup">SMTP HOST</label>
+            <input
+                id="host_setup"
+                name="host_setup"
+                type="text"
+                autocomplete="on"
+                required
+            >
+        </div>
+        
+        <div class="field">
+            <label for="port_setup">SMTP PORT</label>
+            <input
+                id="port_setup"
+                name="port_setup"
+                type="number"
+                min="1"
+                max="65535"
+                autocomplete="on"
+                required
+            >
+        </div>
+        
+        <div class="field">
+            <label for="sender_setup">SENDER (email)</label>
+            <input
+                id="sender_setup"
+                name="sender_setup"
+                type="email"
+                autocomplete="email"
+                required
+            >
+        </div>
+        
+        <div class="field">
+            <label for="smtp_user_setup">SMTP USER</label>
+            <input
+                id="smtp_user_setup"
+                name="smtp_user_setup"
+                type="text"
+                autocomplete="username"
+                required
+            >
+        </div>
+        
+        <div class="field">
+            <label for="smtp_password_setup">SMTP PASSWORD</label>
+        
+            <div class="password-wrapper">
+                <input
+                    id="smtp_password_setup"
+                    name="smtp_password_setup"
+                    type="text"
+                    class="masked-input"
+                    autocomplete="current-password"
+                    spellcheck="false"
+                    required
+                >
+        
+                <button
+                    type="button"
+                    class="password-toggle"
+                    aria-label="Show password"
+                    aria-pressed="false"
+                >Show</button>
+            </div>
+        </div>
+
+        <div class="field">
+            <label for="force_send">Force Send</label>
+            <select
+                id="force_send"
+                name="force_send"
+                required
+            >
+                <option value="no" selected>No</option>
+                <option value="yes">Yes</option>
+            </select>
+        </div>
+
+      </div>
+
+      <div class="checkline">
+
+        <input id="send" name="send" type="checkbox" value="true">
+
+        <label for="send">Send directly
+
+          <small>Off by default. If enabled, the CLI may send generated emails immediately without reviewing each draft. Normally, generate drafts first and send them below.</small>
+
+        </label>
+
+      </div>
+
+      <button class="primary" type="submit" id="generate-button">Generate applications →</button>
+
+    </form>
+
+    <div id="generation-loader" class="generation-loader" role="status" hidden>
+        <div class="pixel-loader" aria-hidden="true"></div>
+        <span>GENERATING APPLICATIONS...</span>
+    </div>
+
+  </section>
+
+  <section class="panel" aria-labelledby="drafts-title">
+
+    <div class="section-head">
+        <div>
+
+            <div class="eyebrow">02 / Review</div>
+
+            <h2 id="drafts-title">Drafts</h2>
+
+        </div>
+
+        <span class="count">{{ drafts|length }}</span>
+
+    </div>
+
+    {% if not drafts %}<p class="empty">No drafts yet. Use the form above to generate applications.</p>{% endif %}
+
+    {% for item in drafts %}
+      <article class="row">
+
+        <div class="row-content">
+
+          <h3>{{ item.company }}</h3>
+
+          <p class="meta">{{ item.email }} · {{ item.contract }} · {{ item.created }}</p>
+
+          <div class="subject">{{ item.subject }}</div>
+
+          <nav class="links" aria-label="Draft documents">
+            {% for filename, label in [('cv.pdf', 'View CV'), 
+                                       ('cover_letter.pdf', 'Letter'), 
+                                       ('body.txt', 'Email body')] %}
+
+              {% if filename in item.files %}
+
+                <a target="_blank" 
+                   rel="noopener" 
+                   href="{{ url_for('view_file', 
+                                     username=username, 
+                                     category='drafts', 
+                                     folder_name=item.folder, 
+                                     filename=filename) }}">
+                   {{ label }}
+                </a>
+
+                {% endif %}
+
+            {% endfor %}
+          </nav>
+
+        </div>
+
+        <form method="post" 
+              action="/{{ username }}/drafts/{{ item.folder }}/send" 
+              class="send-form" 
+              data-email="{{ item.email }}">
+
+          <input type="hidden" name="csrf_token" value="{{ csrf_token }}">
+
+          <button type="submit">Send email →</button>
+
+        </form>
+
+      </article>
+
+    {% endfor %}
+
+    {% if drafts_total_pages > 1 %}
+    <nav class="pagination" aria-label="Draft pages">
+    
+        {% if drafts_page > 1 %}
+        <a href="/{{ username }}?drafts_page={{ drafts_page - 1 }}&applications_page={{ applications_page }}#drafts-title">
+            ← Previous
+        </a>
+        {% endif %}
+    
+        <span>
+            Page {{ drafts_page }} / {{ drafts_total_pages }}
+        </span>
+    
+        {% if drafts_page < drafts_total_pages %}
+        <a href="/{{ username }}?drafts_page={{ drafts_page + 1 }}&applications_page={{ applications_page }}#drafts-title">
+            Next →
+        </a>
+        {% endif %}
+    
+    </nav>
+    {% endif %}
+
+  </section>
+
+  <section class="panel" aria-labelledby="applications-title">
+
+    <div class="section-head">
+
+        <div>
+
+            <div class="eyebrow">03 / Archive</div>
+
+            <h2 id="applications-title">Sent applications</h2>
+
+        </div>
+
+        <span class="count">{{ applications|length }}</span></div>
+
+    {% if not applications %}<p class="empty">No archived applications yet.</p>{% endif %}
+
+    {% for item in applications %}
+
+      <article class="row">
+
+        <div class="row-content">
+
+          <h3>{{ item.company }}</h3>
+
+          <p class="meta">{{ item.email }} · {{ item.contract }} · {{ item.created }}</p>
+
+          <nav class="links" aria-label="Sent application documents">
+
+            {% for filename, label in [('cv.pdf', 'View CV'), 
+                                       ('cover_letter.pdf', 'Letter'), 
+                                       ('body.txt', 'Email body')] %}
+
+              {% if filename in item.files %}
+
+                <a 
+                    target="_blank" 
+                    rel="noopener" 
+                    href="{{ url_for('view_file', 
+                                     username=username, 
+                                     category='applications', 
+                                     folder_name=item.folder, 
+                                     filename=filename) }}">
+                    {{ label }}
+                </a>
+
+              {% endif %}
+
+            {% endfor %}
+
+          </nav>
+
+        </div>
+
+        <span class="status">✓ ARCHIVED</span>
+
+      </article>
+
+    {% endfor %}
+
+    {% if applications_total_pages > 1 %}
+    <nav class="pagination" aria-label="Application pages">
+    
+        {% if applications_page > 1 %}
+        <a href="/{{ username }}?drafts_page={{ drafts_page }}&applications_page={{ applications_page - 1 }}#applications-title">
+            ← Previous
+        </a>
+        {% endif %}
+    
+        <span>
+            Page {{ applications_page }} / {{ applications_total_pages }}
+        </span>
+    
+        {% if applications_page < applications_total_pages %}
+        <a href="/{{ username }}?drafts_page={{ drafts_page }}&applications_page={{ applications_page + 1 }}#applications-title">
+            Next →
+        </a>
+        {% endif %}
+    
+    </nav>
+    {% endif %}
+
+  </section>
+
+  <p class="footer">Good luck !</p>
+
+</main>
+
+</body>
+</html>
+
+

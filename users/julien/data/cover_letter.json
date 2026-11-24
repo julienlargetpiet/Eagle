@@ -1,0 +1,19 @@
+{
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "",
+    "company_city": "",
+    "date": "",
+    "subject": "Spontaneous application",
+    "salutation": "Dear Hiring Manager,",
+    "body": [
+      "I am writing to express my interest in joining your organization.",
+      "My academic background and professional experiences have allowed me to develop skills that I would like to put into practice.",
+      "I would welcome the opportunity to discuss my application with you."
+    ],
+    "closing": "Yours sincerely,"
+  }
+}

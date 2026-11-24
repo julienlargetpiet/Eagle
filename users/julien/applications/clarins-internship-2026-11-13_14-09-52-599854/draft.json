@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Clarins",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Cosmetics",
+    "city": "Pontoise",
+    "website": "https://www.clarins.fr",
+    "notes": "Interested in data analytics"
+  },
+  "contract": "internship",
+  "subject": "Spontaneous application – Data Engineering Internship at Clarins",
+  "body": "Dear Hiring Team at Clarins, I am a Computer Science master's student seeking an internship in Data Engineering. With hands-on experience developing Python scripts and writing SQL queries, I am eager to contribute to your data initiatives in the cosmetics sector. Please find my CV and cover letter attached; I would welcome the opportunity to discuss my application. Kind regards, John Doe, Paris, john@example.com, +33 6 00 00 00 00",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Clarins",
+    "company_city": "Pontoise",
+    "date": "November 13, 2026",
+    "subject": "Spontaneous application – Data Engineering Internship",
+    "salutation": "Dear Hiring Manager,",
+    "body": [
+      "I am writing to express my interest in a Data Engineering internship at Clarins, a company in the cosmetics sector with an interest in data analytics.",
+      "I am a Computer Science master's student (Université Exemple, 2024–2026). During a previous internship as a development trainee in 2025 at Entreprise Exemple, I developed Python scripts and wrote SQL queries. I am also comfortable working in Linux, and I would like to apply these skills to support your data-related projects.",
+      "I would welcome the opportunity to discuss my application and learn more about how I can contribute. Thank you for your time and consideration."
+    ],
+    "closing": "Yours sincerely,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique – Stage en Data Engineering",
+    "summary": "Étudiant en Master informatique intéressé par l'ingénierie des données, avec expérience en développement de scripts Python et en écriture de requêtes SQL.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts en Python",
+          "Rédaction de requêtes SQL"
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+Dear Hiring Manager,
+
+I am reaching out with a spontaneous application for a Data Engineering internship at Veolia (Paris). Currently a Master’s student in computer science, I have practical experience with Python and SQL from a prior development internship and I am motivated to contribute to data initiatives that support environmental services. Please find my CV and cover letter attached.
+
+Thank you for your consideration,
+John Doe
++33 6 00 00 00 00
+john@example.com

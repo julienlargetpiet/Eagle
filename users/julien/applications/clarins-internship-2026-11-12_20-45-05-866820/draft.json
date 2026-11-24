@@ -1,0 +1,55 @@
+{
+  "contact": {
+    "company": "Clarins",
+    "email": "j.larget-piet@proton.me",
+    "source_url": "",
+    "sector": "Cosmetics",
+    "city": "Pontoise",
+    "website": "https://www.clarins.fr",
+    "notes": "Interested in data analytics"
+  },
+  "contract": "internship",
+  "subject": "Candidature spontanée – Stage en Data Engineering (Clarins)",
+  "body": "Madame, Monsieur,\n\nJe vous adresse ma candidature spontanée pour un stage en Data Engineering au sein de Clarins à Pontoise. Étudiant en Master informatique (2024–2026), j’ai une première expérience de stage en développement, avec des compétences en Python, SQL et Linux que je souhaite mettre au service de vos initiatives orientées data analytics.\n\nJe me tiens à votre disposition pour un échange et pour vous transmettre toute information complémentaire. Vous trouverez ci-joints mon CV et ma lettre de motivation.\n\nBien cordialement,\nJohn Doe",
+  "letter": {
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+33 6 00 00 00 00",
+    "city": "Paris",
+    "company": "Clarins",
+    "company_city": "Pontoise",
+    "date": "12 novembre 2026",
+    "subject": "Candidature spontanée – Stage en Data Engineering",
+    "salutation": "Madame, Monsieur,",
+    "body": [
+      "Je vous adresse ma candidature spontanée pour un stage en Data Engineering au sein de Clarins à Pontoise. Étudiant en Master informatique (2024–2026), je m’intéresse particulièrement à l’ingénierie des données et à sa contribution à l’innovation, en résonance avec votre intérêt pour la data analytics dans le secteur des cosmétiques.",
+      "Lors d’un précédent stage en développement, j’ai réalisé des scripts en Python et écrit des requêtes SQL, dans un environnement Linux. Ces expériences me donnent de solides bases pour contribuer à des tâches de collecte et de transformation de données, d’automatisation par scripts et de requêtage fiable, tout en portant attention à la qualité et à la clarté du code.",
+      "Motivé et curieux, je souhaite mettre ces compétences au service de vos équipes et apprendre au contact de vos pratiques. Je serais ravi d’échanger pour préciser vos besoins et la manière dont je peux y contribuer."
+    ],
+    "closing": "Cordialement,"
+  },
+  "cv": {
+    "name": "John Doe",
+    "headline": "Étudiant en informatique – Stage en Data Engineering",
+    "summary": "Étudiant en Master informatique (2024–2026) intéressé par l’ingénierie des données, avec une première expérience de stage en développement. Compétences en Python, SQL et Linux.",
+    "skills": "Python, SQL, Linux",
+    "education": [
+      {
+        "degree": "Master en informatique",
+        "institution": "Université Exemple",
+        "period": "2024–2026"
+      }
+    ],
+    "experience": [
+      {
+        "position": "Stagiaire développement",
+        "company": "Entreprise Exemple",
+        "period": "2025",
+        "achievements": [
+          "Développement de scripts en Python pour automatiser des tâches",
+          "Écriture de requêtes SQL pour interroger et manipuler des données"
+        ]
+      }
+    ]
+  }
+}
