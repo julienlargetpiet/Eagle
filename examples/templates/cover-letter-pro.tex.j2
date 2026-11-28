@@ -1,0 +1,119 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+
+% Color palette
+\definecolor{primary}{HTML}{20354B}
+\definecolor{secondary}{HTML}{59636E}
+\definecolor{bodytext}{HTML}{252525}
+\definecolor{separator}{HTML}{CBD2D9}
+
+% Document settings
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.75em}
+\setstretch{1.12}
+
+\begin{document}
+
+\color{bodytext}
+
+% Candidate information
+{\sffamily\bfseries\fontsize{26}{30}\selectfont
+\color{primary}((( name )))\par}
+
+\vspace{0.15cm}
+
+\begingroup
+\small\sffamily\color{secondary}
+\setlength{\parskip}{2pt}
+
+((* if email *))
+\href{mailto:((( email )))}{((( email )))}\par
+((* endif *))
+
+((* if phone *))
+((( phone )))\par
+((* endif *))
+
+((* if city *))
+((( city )))\par
+((* endif *))
+
+\endgroup
+
+\vspace{0.3cm}
+
+{\color{separator}\rule{\textwidth}{0.8pt}}
+
+\vspace{0.5cm}
+
+% Recipient
+\begin{flushright}
+\setlength{\parskip}{2pt}
+
+((* if company *))
+{\sffamily\bfseries\color{primary}((( company )))}\par
+((* endif *))
+
+((* if company_city *))
+{\color{secondary}((( company_city )))}\par
+((* endif *))
+
+\vspace{0.3cm}
+
+((* if date *))
+{\small\color{secondary}((( date )))}
+((* endif *))
+
+\end{flushright}
+
+\vspace{0.6cm}
+
+% Subject
+{\sffamily\bfseries\large\color{primary}
+Subject: ((( subject )))\par}
+
+\vspace{0.25cm}
+
+% Salutation
+((* if salutation *))
+((( salutation )))
+((* else *))
+Dear Hiring Manager,
+((* endif *))
+
+\vspace{0.2cm}
+
+% Cover letter body
+\justifying
+
+((* for paragraph in body *))
+((( paragraph )))
+
+\par
+((* endfor *))
+
+\vspace{0.4cm}
+
+% Closing
+((* if closing *))
+((( closing )))
+((* else *))
+Sincerely,
+((* endif *))
+
+\vspace{0.4cm}
+
+{\sffamily\bfseries\color{primary}((( name )))}
+
+\end{document}

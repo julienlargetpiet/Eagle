@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1.7cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+
+% Same palette as cover-letter-blue.tex.j2
+\definecolor{primary}{HTML}{17365D}
+\definecolor{accent}{HTML}{3676B5}
+\definecolor{softblue}{HTML}{EAF2FA}
+\definecolor{secondary}{HTML}{526579}
+\definecolor{bodytext}{HTML}{26313D}
+\definecolor{separator}{HTML}{CBD9E8}
+
+% Typography and page settings
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist[itemize]{leftmargin=1.4em, label=\textcolor{accent}{\textbullet},
+  itemsep=2pt, topsep=3pt, parsep=0pt, partopsep=0pt}
+
+% Searchable and selectable PDF text
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Compact, understated section headings
+\titleformat{\section}[block]
+  {\large\bfseries\color{primary}}{}{0pt}{}
+  [\vspace{2pt}{\color{separator}\titlerule[0.8pt]}]
+\titlespacing*{\section}{0pt}{15pt}{7pt}
+
+% Entry heading with wrapping text and right-aligned dates
+\newcommand{\cventry}[3]{%
+  \par\addvspace{5pt}\noindent
+  \Needspace{3\baselineskip}%
+  \begingroup\setlength{\parskip}{0pt}%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1em}}>{\raggedleft\arraybackslash}p{0.25\linewidth}@{}}
+    \textbf{\relax #1} --- #2 & \leavevmode{\small\textcolor{secondary}{\relax #3}}
+  \end{tabularx}\endgroup\par\nopagebreak[3]%
+}
+
+% Two-tone separator, matching the cover letter
+\newcommand{\headerrule}{%
+  \noindent
+  {\color{accent}\rule{2.8cm}{2.2pt}}%
+  {\color{separator}\rule{\dimexpr\linewidth-2.8cm\relax}{2.2pt}}\par
+}
+
+% Pale blue headline panel, matching the cover letter's subject panel
+\newsavebox{\headlinepanel}
+\newcommand{\headlinebox}[1]{%
+  \par\noindent\begingroup
+  \setlength{\fboxsep}{7pt}%
+  \sbox{\headlinepanel}{%
+    \colorbox{softblue}{%
+      \parbox{\dimexpr\linewidth-3pt-2\fboxsep\relax}{%
+        \centering\large\color{primary}#1}}}%
+  {\color{accent}\rule[-\dp\headlinepanel]{3pt}%
+    {\dimexpr\ht\headlinepanel+\dp\headlinepanel\relax}}%
+  \usebox{\headlinepanel}\par
+  \endgroup
+}
+
+\begin{document}
+\color{bodytext}
+
+% Candidate information
+{\centering
+  {\bfseries\color{primary}\fontsize{29}{34}\selectfont ((( name )))\par}
+}
+\vspace{4pt}
+\headerrule
+\vspace{3pt}
+\headlinebox{((( headline )))}
+
+\section*{Profil}
+((( summary )))
+
+\section*{Formation}
+((* for item in education *))
+\cventry{((( item.degree )))}{((( item.institution )))}{((( item.period )))}
+((* endfor *))
+
+\section*{Expériences}
+((* for item in experience *))
+\cventry{((( item.position )))}{((( item.company )))}{((( item.period )))}
+\begin{itemize}
+((* for achievement in item.achievements *))
+\item ((( achievement )))
+((* endfor *))
+\end{itemize}
+((* endfor *))
+
+\section*{Compétences}
+((( skills )))
+
+\end{document}
+
+

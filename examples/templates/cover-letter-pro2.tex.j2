@@ -1,0 +1,139 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=2.5cm]{geometry}
+\usepackage{parskip}
+\usepackage{ragged2e}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{setspace}
+\usepackage[hidelinks]{hyperref}
+
+% Professional blue palette
+\definecolor{primary}{HTML}{17365D}
+\definecolor{accent}{HTML}{3676B5}
+\definecolor{softblue}{HTML}{EAF2FA}
+\definecolor{secondary}{HTML}{526579}
+\definecolor{bodytext}{HTML}{26313D}
+\definecolor{separator}{HTML}{CBD9E8}
+
+% Document settings
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.65em}
+\setstretch{1.12}
+
+% Header separator with a blue accent segment
+\newcommand{\headerrule}{%
+  \noindent
+  {\color{accent}\rule{2.8cm}{2.2pt}}%
+  {\color{separator}\rule{\dimexpr\linewidth-2.8cm\relax}{2.2pt}}\par
+}
+
+% Light blue subject panel with a solid accent on the left
+\newsavebox{\subjectpanel}
+\newcommand{\subjectbox}[1]{%
+  \par\noindent\begingroup
+  \setlength{\fboxsep}{10pt}%
+  \sbox{\subjectpanel}{%
+    \colorbox{softblue}{%
+      \parbox{\dimexpr\linewidth-3pt-2\fboxsep\relax}{%
+        \sffamily\bfseries\large\color{primary}#1}}}%
+  {\color{accent}\rule[-\dp\subjectpanel]{3pt}%
+    {\dimexpr\ht\subjectpanel+\dp\subjectpanel\relax}}%
+  \usebox{\subjectpanel}\par
+  \endgroup
+}
+
+\begin{document}
+
+\color{bodytext}
+
+% Candidate information
+{\sffamily\bfseries\fontsize{27}{31}\selectfont
+\color{primary}((( name )))\par}
+
+\vspace{0.12cm}
+
+\begingroup
+\small\sffamily\color{secondary}
+\setlength{\parskip}{2pt}
+
+((* if email *))
+\href{mailto:((( email )))}{\textcolor{accent}{((( email )))}}\par
+((* endif *))
+
+((* if phone *))
+((( phone )))\par
+((* endif *))
+
+((* if city *))
+((( city )))\par
+((* endif *))
+
+\endgroup
+
+\vspace{0.25cm}
+\headerrule
+\vspace{0.35cm}
+
+% Recipient
+\begin{flushright}
+\setlength{\parskip}{2pt}
+
+((* if company *))
+{\sffamily\bfseries\large\color{primary}((( company )))}\par
+((* endif *))
+
+((* if company_city *))
+{\color{secondary}((( company_city )))}\par
+((* endif *))
+
+((* if date *))
+\vspace{0.2cm}
+{\small\sffamily\color{secondary}((( date )))}\par
+((* endif *))
+
+\end{flushright}
+
+\vspace{0.4cm}
+
+% Subject
+\subjectbox{Subject: ((( subject )))}
+
+\vspace{0.35cm}
+
+% Salutation
+((* if salutation *))
+((( salutation )))
+((* else *))
+Dear Hiring Manager,
+((* endif *))
+
+\vspace{0.2cm}
+
+% Cover letter body
+\justifying
+
+((* for paragraph in body *))
+((( paragraph )))
+
+\par
+((* endfor *))
+
+\vspace{0.35cm}
+
+% Closing
+((* if closing *))
+((( closing )))
+((* else *))
+Sincerely,
+((* endif *))
+
+\vspace{0.3cm}
+
+{\sffamily\bfseries\color{primary}((( name )))\par}
+
+\end{document}

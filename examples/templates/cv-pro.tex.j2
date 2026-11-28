@@ -1,0 +1,73 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=1.7cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{needspace}
+\usepackage[hidelinks]{hyperref}
+
+% Typography and page settings
+\renewcommand{\familydefault}{\sfdefault}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlist[itemize]{leftmargin=1.4em, label=\textbullet,
+  itemsep=2pt, topsep=3pt, parsep=0pt, partopsep=0pt}
+
+% Searchable and selectable PDF text
+\input{glyphtounicode}
+\pdfgentounicode=1
+
+% Compact, understated section headings
+\titleformat{\section}[block]
+  {\large\bfseries}{}{0pt}{}
+  [\vspace{2pt}{\titlerule[0.5pt]}]
+\titlespacing*{\section}{0pt}{15pt}{7pt}
+
+% Entry heading with wrapping text and right-aligned dates
+\newcommand{\cventry}[3]{%
+  \par\addvspace{5pt}\noindent
+  \Needspace{3\baselineskip}%
+  \begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{\hspace{1em}}>{\raggedleft\arraybackslash}p{0.25\linewidth}@{}}
+    \textbf{\relax #1} --- #2 & {\small #3}
+  \end{tabularx}\par\nopagebreak[3]%
+}
+
+\begin{document}
+
+% Candidate information
+{\centering
+  {\bfseries\fontsize{29}{34}\selectfont ((( name )))\par}
+  \vspace{3pt}
+  {\large ((( headline )))\par}
+}
+\vspace{5pt}
+\noindent\rule{\linewidth}{1pt}\par
+
+\section*{Profil}
+((( summary )))
+
+\section*{Formation}
+((* for item in education *))
+\cventry{((( item.degree )))}{((( item.institution )))}{((( item.period )))}
+((* endfor *))
+
+\section*{Expériences}
+((* for item in experience *))
+\cventry{((( item.position )))}{((( item.company )))}{((( item.period )))}
+\begin{itemize}
+((* for achievement in item.achievements *))
+\item ((( achievement )))
+((* endfor *))
+\end{itemize}
+((* endfor *))
+
+\section*{Compétences}
+((( skills )))
+
+\end{document}
